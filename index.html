@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Employee Information Form</h1>
+    <h1 class="title">Employee Information Form</h1>
     <div class="form-container">
-      <form action="#">
+      <form action="#" hidden>
+        <h3>Personal Information</h3>
+        <hr />
         <h4>Name</h4>
         <div class="form-container__name">
           <div class="flex">
@@ -59,15 +68,128 @@
             <label for="citymunicipality">City/Municipality</label>
           </div>
           <div class="flex">
-            <select name="awd" id="awd">
-              <option value="awd">awdawd</option>
-              <option value="awd">awdaawdwd</option>
-              <option value="awd">awdawdsss</option>
+            <select name="barangay" id="barangay">
+              <option value="awd">Brgy. 350</option>
+              <option value="awd">Brgy. 420</option>
+              <option value="awd">Brgy. 249</option>
             </select>
-            <label for="stateprovince">Barangay</label>
+            <label for="barangay">Barangay</label>
           </div>
         </div>
+        <div class="form-container__contact">
+          <div class="">
+            <h4>Phone Number</h4>
+            <input type="text" />
+          </div>
+          <div class="">
+            <h4>Home Phone Number</h4>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="form-container__info">
+          <div class="">
+            <h4>Email</h4>
+            <input type="email" id="email" />
+            <label for="email">example@example.com</label>
+          </div>
+          <div class="">
+            <h4>Birthday</h4>
+            <input type="date" id="birthday" />
+            <label for="birthday">Date</label>
+          </div>
+        </div>
+        <div class="form-container__upload">
+          <h4>Please upload your photo here</h4>
+          <input type="file" id="fileupload" hidden />
+          <label for="fileupload">
+            <div>
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <h4>Browse Files</h4>
+              <p>Drag and drop files here</p>
+            </div>
+          </label>
+          <span id="filechosen"></span>
+        </div>
       </form>
+      <form hidden>
+        <h3>Job Information</h3>
+        <hr />
+        <h4>Title</h4>
+        <input type="text" />
+        <h4>Department</h4>
+        <select name="department" id="department">
+          <option value="worktpe">Marketing</option>
+        </select>
+        <h4>Working Type</h4>
+        <select name="worktype" id="worktype">
+          <option value="marketing">Full time</option>
+          <option value="marketing">Part time</option>
+          <option value="marketing">Remote</option>
+        </select>
+        <h4>Start Date</h4>
+        <input type="date">
+        <label for="date">Date</label>
+      </form>
+      <form action="" >
+        <h3>Emergency Contact Information</h3>
+        <hr />
+        <h4>Primary Emergency | Contact Name</h4>
+        <div class="form-container__name">
+          <div class="flex">
+            <input type="text" id="emergencyfirstname" />
+            <div>
+              <label for="emergencyfirstname">First Name</label>
+            </div>
+          </div>
+          <div class="flex">
+            <input type="text" id="emergencylastname" />
+            <div>
+              <label for="emergencylastname">Last Name</label>
+            </div>
+          </div>
+        </div>
+          <h4>Primary Emergency | Phone Number</h4>
+          <input type="text" id="emergencynumber" class="w-h">
+          <div>
+            <label for="emergencynumber">Please enter a valid number.</label>
+          </div>
+          <h4>Primary Emergency | What is your relationship with this person?</h4>
+          <input type="text">
+          <hr>
+          <h4>Secondary Emergency | Contact Name</h4>
+        <div class="form-container__name">
+          <div class="flex">
+            <input type="text" id="secondaryemergencyfirstname" />
+            <div>
+              <label for="secondaryemergencyfirstname">First Name</label>
+            </div>
+          </div>
+          <div class="flex">
+            <input type="text" id="secondaryemergencylastname" />
+            <div>
+              <label for="secondaryemergencylastname">Last Name</label>
+            </div>
+          </div>
+        </div>
+        <h4>Secondary Emergency | Phone Number</h4>
+          <input type="text" id="secondaryemergencynumber" class="w-h">
+          <div>
+            <label for="secondaryemergencynumber">Please enter a valid number.</label>
+          </div>
+          <h4>Secondary Emergency | What is your relationship with this person?</h4>
+          <input type="text">
+      </form>
+      <div class="form-container__buttons">
+        <button class="btn-prev">Previous</button>
+        <button class="btn-next">Next</button>
+      </div>
     </div>
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -18,10 +18,21 @@ body {
   align-items: center;
 }
 
+.title {
+  color: white;
+  /* margin-top: 1rem; */
+  text-align: center;
+  margin: 1rem 1rem 0 1rem;
+}
+
 h4 {
   font-weight: none;
   font-weight: normal;
   margin: 0.5rem 0;
+}
+hr{
+  color: rgba(0, 0, 0, 0.300);
+  margin: 1rem auto;
 }
 .form-container {
   background-color: white;
@@ -30,36 +41,126 @@ h4 {
   margin: 2rem 1rem;
 }
 .form-container__name,
-.form-container__address {
+.form-container__address,
+.form-container__contact,
+.form-container__info {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: stretch;
 }
+.form-container__contact div {
+  width: 100%;
+}
+.form-container__info div {
+  width: 100%;
+}
+.form-container__upload label {
+  width: 100%;
+}
 
-/* Utility */
-.flex {
-  flex: 1;
+.form-container__upload label div {
+  text-align: center;
+  border: 1px dotted black;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.form-container__upload label i {
+  font-size: 1.5rem;
+}
+.form-container__upload label h4 {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.form-container__upload span{
+  background-color: #dae6ff;
+  display: inline-block;
+  margin: 2px 0;
+  border-radius: 5px;
 }
 
 form label {
   display: inline-block;
   font-size: 0.65rem;
   color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 form input,
 form select {
   height: 2rem;
   border-radius: 5px;
-  outline: none;
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding-left: 10px;
   color: rgba(0, 0, 0, 0.8);
   width: 100%;
   background: none;
   flex: 1;
+}
+.form-container__buttons {
+  margin: 1rem auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.form-container__buttons .btn-prev {
+  background-color: #e5e7f2;
+}
+.form-container__buttons .btn-prev:hover {
+  background-color: #ced0da;
+}
+.form-container__buttons .btn-next {
+  background-color: #2e69ff;
+  color: white;
+}
+.form-container__buttons .btn-next:hover {
+  background-color: #295fe6;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: .9rem;
+  min-width: 120px;
+  min-height: 40px;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+
+/* Utility */
+.flex {
+  flex: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .form-container__contact div {
+    flex: 1;
+  }
+  .form-container__info div {
+    flex: 1;
+  }
+  #emergencynumber{
+    width: 50%;
+  }
+  .w-h {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -74,5 +175,13 @@ form select {
   form input,
   form select {
     width: 100%;
+  }
+
+  .form-container__contact div {
+    flex: 1;
+  }
+
+  .w-h {
+    width: 50%;
   }
 }
