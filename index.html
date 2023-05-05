@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Employee Information Form</h1>
+    <div class="form-container">
+      <form action="#">
+        <h4>Name</h4>
+        <div class="form-container__name">
+          <div class="flex">
+            <input type="text" id="firstname" />
+            <div>
+              <label for="firstname">First Name</label>
+            </div>
+          </div>
+          <div class="flex">
+            <input type="text" id="lastname" />
+            <div>
+              <label for="lastname">Last Name</label>
+            </div>
+          </div>
+        </div>
+        <h4>Address</h4>
+        <input type="text" id="streetaddress" />
+        <label for="streetaddress">Street Address</label>
+        <input type="text" id="streetaddress2" />
+        <label for="streetaddress2">Street Address Line 2</label>
+        <div class="form-container__address">
+          <div class="flex">
+            <select name="region" id="region">
+              <option value="awd">Region III</option>
+              <option value="awd">Region IV-A</option>
+              <option value="awd">Region IV-B</option>
+            </select>
+            <label for="region">Region</label>
+          </div>
+          <div class="flex">
+            <select name="stateprovince" id="stateprovince">
+              <option value="awd">Cavite</option>
+              <option value="awd">Laguna</option>
+              <option value="awd">Batangas</option>
+            </select>
+            <label for="stateprovince">State/Province</label>
+          </div>
+        </div>
+        <div class="form-container__address">
+          <div class="flex">
+            <select name="citymunicipality" id="citymunicipality">
+              <option value="awd">Sta. Cruz</option>
+              <option value="awd">Sampaloc</option>
+              <option value="awd">Tondo</option>
+            </select>
+            <label for="citymunicipality">City/Municipality</label>
+          </div>
+          <div class="flex">
+            <select name="awd" id="awd">
+              <option value="awd">awdawd</option>
+              <option value="awd">awdaawdwd</option>
+              <option value="awd">awdawdsss</option>
+            </select>
+            <label for="stateprovince">Barangay</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

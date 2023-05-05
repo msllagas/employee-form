@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(to bottom right, #393e46, black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+  font-weight: none;
+  font-weight: normal;
+  margin: 0.5rem 0;
+}
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 2rem 1rem;
+}
+.form-container__name,
+.form-container__address {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Utility */
+.flex {
+  flex: 1;
+}
+
+form label {
+  display: inline-block;
+  font-size: 0.65rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+form input,
+form select {
+  height: 2rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  background: none;
+  flex: 1;
+}
+
+@media screen and (min-width: 750px) {
+  .form-container {
+    width: 32rem;
+  }
+  .form-container__name,
+  .form-container__address {
+    gap: 1rem;
+  }
+
+  form input,
+  form select {
+    width: 100%;
+  }
+}
