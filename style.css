@@ -99,6 +99,16 @@ form select {
   background: none;
   flex: 1;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .form-container__buttons {
   margin: 1rem auto;
   display: flex;
@@ -142,8 +152,8 @@ button {
 }
 
 .step {
-  height: 30px;
-  width: 30px;
+  height: 1.25rem;
+  width: 1.25rem;
   margin: 0 2px;
   background-color: #bbbbbb;
   border: none;
