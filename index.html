@@ -17,16 +17,10 @@
     <title>Employee Information Form</title>
   </head>
   <body>
-    <h1 class="title">Employee Information Form</h1>
-    <div style="text-align:center;margin-top:40px;">
-      <span class="step"></span>
-      <span class="step"></span>
-      <span class="step"></span>
-    </div>
+    <h1 class="title">Employee Registration Form</h1>
+
     <div class="form-container">
-      <form action="#" class="formtab" hidden>
-        <h3>Personal Information</h3>
-        <hr />
+      <form action="thanks-page.html" class="formtab">
         <h4>Name</h4>
         <div class="form-container__name">
           <div class="flex">
@@ -39,6 +33,27 @@
             <input type="text" id="lastname" />
             <div>
               <label for="lastname">Last Name</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-container__info">
+          <div class="">
+            <h4>Email</h4>
+            <input type="email" id="email" />
+            <label for="email">example@example.com</label>
+          </div>
+          <div class="">
+            <h4>Birthday</h4>
+            <input type="date" id="birthday" />
+            <label for="birthday">Date</label>
+          </div>
+        </div>
+        <div class="form-container__contact">
+          <div>
+            <h4>Phone Number</h4>
+            <input type="tel" id="phonenumber" class="w-h" />
+            <div>
+              <label for="">Please enter a valid phone number.</label>
             </div>
           </div>
         </div>
@@ -83,30 +98,35 @@
             <label for="barangay">Barangay</label>
           </div>
         </div>
-        <div class="form-container__contact">
-          <div class="">
-            <h4>Phone Number</h4>
-            <input type="tel" />
-          </div>
-          <div class="">
-            <h4>Home Phone Number</h4>
-            <input type="tel" />
-          </div>
+        <div>
+          <input type="text" id="postalcode" />
+          <label for="postalcode">Postal/Zip Code</label>
         </div>
-        <div class="form-container__info">
-          <div class="">
-            <h4>Email</h4>
-            <input type="email" id="email" />
-            <label for="email">example@example.com</label>
-          </div>
-          <div class="">
-            <h4>Birthday</h4>
-            <input type="date" id="birthday" />
-            <label for="birthday">Date</label>
-          </div>
+        <h4>Applying Position</h4>
+        <input type="text" name="" id="" />
+        <h4>Type of Work</h4>
+        <div class="worktype">
+          <input
+            type="radio"
+            id="permanent"
+            name="worktype"
+            value="permanent"
+          />
+          <label for="permanent"><p>Permanent</p></label><br />
+          <input type="radio" id="both" name="worktype" value="both" />
+          <label for="both">Both</label><br />
+          <input
+            type="radio"
+            id="temporary"
+            name="worktype"
+            value="temporary"
+          />
+          <label for="temporary">Temporary</label><br />
+          <input type="radio" id="other" name="worktype" value="other" />
+          <label for="other">Other</label><br />
         </div>
         <div class="form-container__upload">
-          <h4>Please upload your photo here</h4>
+          <h4>Please Upload Resume</h4>
           <input type="file" id="fileupload" hidden />
           <label for="fileupload">
             <div>
@@ -117,80 +137,121 @@
           </label>
           <span id="filechosen"></span>
         </div>
-      </form>
-      <form  class="formtab" hidden>
-        <h3>Job Information</h3>
-        <hr />
-        <h4>Title</h4>
-        <input type="text" />
-        <h4>Department</h4>
-        <select name="department" id="department">
-          <option value="worktype">Marketing</option>
-        </select>
-        <h4>Working Type</h4>
-        <select name="worktype" id="worktype">
-          <option value="marketing">Full time</option>
-          <option value="marketing">Part time</option>
-          <option value="marketing">Remote</option>
-        </select>
-        <h4>Start Date</h4>
-        <input type="date">
-        <label for="date">Date</label>
-      </form>
-      <form action="thanks-page.html" class="formtab" id="emergencyform" hidden>
-        <h3>Emergency Contact Information</h3>
-        <hr />
-        <h4>Primary Emergency | Contact Name</h4>
-        <div class="form-container__name">
-          <div class="flex">
-            <input type="text" id="emergencyfirstname" />
-            <div>
-              <label for="emergencyfirstname">First Name</label>
-            </div>
-          </div>
-          <div class="flex">
-            <input type="text" id="emergencylastname" />
-            <div>
-              <label for="emergencylastname">Last Name</label>
-            </div>
-          </div>
+        <h4>Cover letter or additional information</h4>
+        <textarea
+          id="information"
+          name="information"
+          placeholder="Type here..."
+          rows="20"
+          cols=""
+        ></textarea>
+        <h4>
+          Veteran Status (Please select the option that describes your status
+          the best)
+        </h4>
+        <div class="vetstatus">
+          <input type="radio" name="veteranstatus" />
+          <label>I am a veteran</label><br />
+          <input type="radio" name="veteranstatus" />
+          <label>I am a recently separated veteran</label><br />
+          <input type="radio" name="veteranstatus" />
+          <label>I am a specialized disabled veteran</label><br />
+          <input type="radio" name="veteranstatus" />
+          <label>I am an other protected veteran</label><br />
+          <input type="radio" name="veteranstatus" />
+          <label>I am not a veteran</label><br />
+          <input type="radio" name="veteranstatus" />
+          <label>Prefer Not To Answer</label><br />
         </div>
-          <h4>Primary Emergency | Phone Number</h4>
-          <input type="tel" id="emergencynumber" class="w-h">
-          <div>
-            <label for="emergencynumber">Please enter a valid number.</label>
-          </div>
-          <h4>Primary Emergency | What is your relationship with this person?</h4>
-          <input type="text">
-          <hr>
-          <h4>Secondary Emergency | Contact Name</h4>
-        <div class="form-container__name">
-          <div class="flex">
-            <input type="text" id="secondaryemergencyfirstname" />
-            <div>
-              <label for="secondaryemergencyfirstname">First Name</label>
-            </div>
-          </div>
-          <div class="flex">
-            <input type="text" id="secondaryemergencylastname" />
-            <div>
-              <label for="secondaryemergencylastname">Last Name</label>
-            </div>
-          </div>
+        <h4>Gender</h4>
+        <div class="gender">
+          <input type="radio" name="gender" />
+          <label>Male</label><br />
+          <input type="radio" name="gender" />
+          <label>Female</label><br />
+          <input type="radio" name="gender" />
+          <label>Transgender Male</label><br />
+          <input type="radio" name="gender" />
+          <label>Transgender Female</label><br />
+          <input type="radio" name="gender" />
+          <label>Not Listed</label><br />
+          <input type="radio" name="gender" />
+          <label>Prefer Not To Answer</label><br />
         </div>
-        <h4>Secondary Emergency | Phone Number</h4>
-          <input type="tel" id="secondaryemergencynumber" class="w-h">
-          <div>
-            <label for="secondaryemergencynumber">Please enter a valid number.</label>
-          </div>
-          <h4>Secondary Emergency | What is your relationship with this person?</h4>
-          <input type="text">
+        <h4>Disabilities</h4>
+        <div class="disability">
+          <label>
+            <input type="radio" name="disability" />
+            <span>I have no disablity</span> </label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I have two or more impairments and/or disabling medical
+            conditions.</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I have a Specific Learning Difficulty (e.g.
+            Dyslexia/Dyspraxia/AD(H)D)</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I have a social/communication impairment such as Asperger's
+            syndrome/other autistic spectrum disorder</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I have a long standing illness or health condition such as cancer,
+            HIV, diabetes, chronic heart disease, or epilepsy</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I have a physical impairment or mobility issues (e.g. difficulty
+            using arms/using a wheelchair or crutches)</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I am deaf or have a serious hearing impairment</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I am blind or have a serious visual impairment uncorrected by
+            glasses</label
+          ><br />
+          <label>
+            <input type="radio" name="disability" />
+            I have a disability, impairment or medical condition not listed
+            here</label
+          ><br />
+          <input type="radio" name="disability" />
+          <label>Prefer not to answer</label><br />
+        </div>
+        <h4>Race</h4>
+        <div class="race">
+          <input type="radio" name="race" />
+          <label>America Native or Alaska Native</label><br />
+          <input type="radio" name="race" />
+          <label>Asian</label><br />
+          <input type="radio" name="race" />
+          <label>Black or African America</label><br />
+          <input type="radio" name="race" />
+          <label>Native Hawaiian or Other Pacific Islander</label><br />
+          <input type="radio" name="race" />
+          <label>White</label><br />
+          <input type="radio" name="race" />
+          <label>Two or more races</label><br />
+          <input type="radio" name="race" />
+          <label>Declint to specify</label><br />
+          <input type="radio" name="race" />
+          <label>Other</label><br />
+        </div>
+        <h4>Additional Notes</h4>
+        <textarea name="" id="" placeholder="Type here..." cols="30" rows="10"></textarea>
+      
+        <div class="form-container__buttons">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
       </form>
-      <div class="form-container__buttons">
-        <button class="btn-prev" onclick="nextPrev(-1)">Previous</button>
-        <button class="btn-next" onclick="nextPrev(1)">Next</button>
-      </div>
     </div>
-
   </body>
 </html>
