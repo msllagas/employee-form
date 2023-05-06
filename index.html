@@ -12,18 +12,25 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+
     <title>Document</title>
   </head>
   <body>
     <h1 class="title">Employee Information Form</h1>
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
     <div class="form-container">
-      <form action="#" hidden>
+      <form action="#" class="formtab" hidden>
         <h3>Personal Information</h3>
         <hr />
         <h4>Name</h4>
         <div class="form-container__name">
           <div class="flex">
-            <input type="text" id="firstname" />
+            <input type="text" id="firstname" required />
             <div>
               <label for="firstname">First Name</label>
             </div>
@@ -111,7 +118,7 @@
           <span id="filechosen"></span>
         </div>
       </form>
-      <form hidden>
+      <form  class="formtab" hidden>
         <h3>Job Information</h3>
         <hr />
         <h4>Title</h4>
@@ -130,7 +137,7 @@
         <input type="date">
         <label for="date">Date</label>
       </form>
-      <form action="" >
+      <form action="thanks-page.html" class="formtab" id="emergencyform" hidden>
         <h3>Emergency Contact Information</h3>
         <hr />
         <h4>Primary Emergency | Contact Name</h4>
@@ -180,16 +187,10 @@
           <input type="text">
       </form>
       <div class="form-container__buttons">
-        <button class="btn-prev">Previous</button>
-        <button class="btn-next">Next</button>
+        <button class="btn-prev" onclick="nextPrev(-1)">Previous</button>
+        <button class="btn-next" onclick="nextPrev(1)">Next</button>
       </div>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <span class="step"></span>
-      <span class="step"></span>
-      <span class="step"></span>
-      <span class="step"></span>
-    </div>
-    <script src="app.js"></script>
+
   </body>
 </html>
