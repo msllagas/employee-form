@@ -99,16 +99,10 @@ form select {
   background: none;
   flex: 1;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input.invalid {
+  background-color: #ffdddd;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
 .form-container__buttons {
   margin: 1rem auto;
   display: flex;
